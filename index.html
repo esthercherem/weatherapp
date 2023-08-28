@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: Arial, sans-serif;
+background-color: #f7f7f7;
+}
+
+.container {
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+}
+
+h1 {
+margin-bottom: 20px;
+text-align: center;
+}
+
+form {
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+}
+
+input[type="text"] {
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px 0 0 5px;
+}
+
+button[type="submit"] {
+padding: 10px;
+background-color: #4CAF50;
+color: #fff;
+border: 1px solid #4CAF50;
+border-radius: 0 5px 5px 0;
+cursor: pointer;
+}
+
+.weather-card {
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+padding: 20px;
+}
+
+.hide {
+display: none;
+}
+
+#weatherIcon {
+width: 100px;
+height: 100px;
+}
+
+#weatherDesc {
+text-transform: capitalize;
+}
+
+#previousSearches {
+list-style-type: none;
+margin-top: 20px;
+}
+
+#previousSearches li {
+margin-bottom: 10px;
+}
+
+</style>
+
+
+
+
+<body>
+
+    <div class="container">
+        <h1>Weather App</h1>
+        <form id="cityForm">
+          <input type="text" id="cityInput" placeholder="Enter a city...">
+          <button type="submit">Submit</button>
+        </form>
+        <div id="weatherCard" class="weather-card-hide">
+          <h2 id="cityName"></h2>
+          <h3 id="countryName"></h3>
+          <div id="weatherInfo">
+            <img id="weatherIcon" src="" alt="Weather Icon">
+            <p id="weatherDesc"></p>
+          </div>
+          <p id="temp"></p>
+          <p id="humidity"></p>
+        </div>
+        <div id="error" class="hide">
+          <p>Invalid city. Please try again.</p>
+        </div>
+        <h2>Previous Searches</h2>
+        <ul id="previousSearches"></ul>
+      </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
